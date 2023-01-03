@@ -1,10 +1,6 @@
 local plugins = {
-  ["folke/todo-comments.nvim"] = {
-    config = function()
-      require("todo-comments").setup {
-        -- config: null
-      }
-    end,
+  ["dstein64/vim-startuptime"] = {
+    cmd = "StartupTime",
   },
   ["jose-elias-alvarez/null-ls.nvim"] = {
     config = function()

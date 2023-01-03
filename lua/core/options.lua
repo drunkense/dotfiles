@@ -2,7 +2,6 @@ local opt = vim.opt
 local g = vim.g
 
 -- default config
--- vim.g.transparent_enabled = true
 vim.g.jc_default_mappings = 1
 vim.g.jc_autoformat_on_save = 1
 vim.g.mapleader = " "

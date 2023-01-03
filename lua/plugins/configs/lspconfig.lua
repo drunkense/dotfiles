@@ -77,16 +77,6 @@ capabilities.textDocument.completion.completionItem = {
   },
 }
 
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   cmd = { "typescript-language-server.cmd", "--stdio" },

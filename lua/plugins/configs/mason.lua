@@ -15,9 +15,7 @@ vim.api.nvim_create_autocmd("Filetype", {
 
 local options = {
   ensure_installed = { "lua-language-server", "typescript-language-server", "css-lsp", "emmet-lsp", "eslint-lsp",
-    "eslint_d", "prettierd", "prettier", "json-lsp", "tailwindcss-language-server" }, -- not an option from mason.nvim
-
-  -- PATH = 'C:/Users/final/AppData/Local/nvim-data/lsp_servers/tsserver',
+    "eslint_d", "prettierd", "prettier", "json-lsp", "tailwindcss-language-server", "jdtls" }, -- not an option from mason.nvim
 
   ui = {
     icons = {
