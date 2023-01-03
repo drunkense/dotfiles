@@ -1,4 +1,9 @@
 local plugins = {
+  ['windwp/nvim-ts-autotag'] = {
+    config = function()
+      require("plugins.configs.autotag")
+    end
+  },
   ["dstein64/vim-startuptime"] = {
     cmd = "StartupTime",
   },
@@ -15,6 +20,9 @@ local plugins = {
   ["glepnir/lspsaga.nvim"] = {
     config = function()
       require("plugins.configs.lspsaga")
+    end,
+    setup = function()
+      require("core.utils").load_mappings "Lspsaga"
     end,
   },
   ["onsails/lspkind-nvim"] = {
@@ -46,7 +54,6 @@ local plugins = {
       require "plugins.configs.toggleterm-nvim"
     end,
   },
-  ['folke/lsp-colors.nvim'] = {},
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
 
   ["lewis6991/impatient.nvim"] = {},
@@ -143,12 +150,6 @@ local plugins = {
     after = "nvim-cmp",
     config = function()
       require("plugins.configs.others").autopairs()
-    end,
-  },
-
-  ["goolord/alpha-nvim"] = {
-    config = function()
-      require("plugins.configs.alpha")
     end,
   },
 
