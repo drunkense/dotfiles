@@ -34,4 +34,4 @@ options = require("core.utils").load_override(options, "nvim-treesitter/nvim-tre
 
 treesitter.setup(options)
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx", "lua", "html", "json" }
