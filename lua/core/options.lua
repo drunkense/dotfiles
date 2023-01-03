@@ -15,24 +15,9 @@ vim.opt.background = 'dark'
 vim.cmd [[
   augroup highlight_yank
   autocmd!
-  au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=100})
+  au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=5})
   augroup END
 ]]
-
-
-local status, colors = pcall(require, "lsp-colors")
-if not status then
-  return
-end
-
-colors.setup {
-  Error = "#db4b4b",
-  Warning = "#e0af68",
-  Information = "#0db9d7",
-  Hint = "#10B981",
-}
-
-vim.cmd("autocmd!")
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
@@ -132,6 +117,12 @@ local default_plugins = {
   "compiler",
   "bugreport",
   "ftplugin",
+  "tohmtl",
+  "matchparen",
+  "tutor_mode_plugin",
+  "remote_plugins",
+  "spellfile_plugin",
+  "shada_plugin"
 }
 
 for _, plugin in pairs(default_plugins) do
