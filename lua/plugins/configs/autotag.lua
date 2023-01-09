@@ -10,6 +10,4 @@ autotag.setup({
     'markdown',
     'glimmer', 'handlebars', 'hbs'
   }
-
-
 })
