@@ -32,6 +32,7 @@ M.general = {
     keymap.set('v', '<C-left>', 'b'),
     keymap.set('v', '<C-right>', 'w'),
 
+    ["<leader>m"] = { "<cmd> Prettier <CR>", "Format prettier" },
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },
     [",,"] = { "<cmd> bprevious <CR>", "Pre buffer" },
     [".."] = { "<cmd> bnext <CR>", "Next buffer" },
