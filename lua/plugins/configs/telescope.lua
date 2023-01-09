@@ -11,9 +11,28 @@ local function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
 
+vim.g.theme_switcher_loaded = true
+
 local fb_actions = require "telescope".extensions.file_browser.actions
 telescope.setup {
   defaults = {
+    preview_cutoff = 0,
+    vimgrep_arguments = {
+      "rg",
+      "-L",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+    },
+    prompt_prefix = "   ",
+    selection_caret = "  ",
+    entry_prefix = "  ",
+    initial_mode = "insert",
+    selection_strategy = "reset",
+    layout_strategy = "horizontal",
     mappings = {
       n = {
         ["q"] = actions.close
