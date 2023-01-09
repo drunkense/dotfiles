@@ -50,7 +50,7 @@ local options = {
   sources = cmp.config.sources({
     { name = 'luasnip' },
     { name = 'nvim_lsp' },
-    -- { name = 'buffer' },
+    { name = 'buffer' },
     -- { name = 'nvim_lsp_signature_help' },
   }),
   formatting = {
