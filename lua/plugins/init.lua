@@ -1,4 +1,10 @@
 local plugins = {
+  ['MunifTanjim/prettier.nvim'] = {
+    config = function()
+      require("plugins.configs.prettier-config")
+    end
+  },
+  ['mattn/emmet-vim'] = {},
   ['windwp/nvim-ts-autotag'] = {
     config = function()
       require("plugins.configs.autotag")
