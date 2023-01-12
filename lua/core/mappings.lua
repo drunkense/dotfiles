@@ -115,6 +115,7 @@ M.telescope = {
     [";;"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find symbols" },
     [";e"] = { "<cmd> Telescope diagnostics <CR>", "Find error" },
     ["sf"] = { "<cmd> Telescope file_browser<CR>", "Telescope file_browser" },
+    ["\\"] = { "<cmd> Telescope buffers<CR>", "Telescope buffer" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
