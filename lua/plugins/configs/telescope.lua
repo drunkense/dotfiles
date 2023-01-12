@@ -68,9 +68,6 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', '\\\\', function()
-  builtin.buffers()
-end)
 vim.keymap.set('n', 'sf', function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
