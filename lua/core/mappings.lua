@@ -28,9 +28,9 @@ M.general = {
     keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {}),
     keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {}),
     keymap.set('n', '<C-left>', 'b'),
-    keymap.set('n', '<C-right>', 'w'),
+    keymap.set('n', '<C-right>', 'e'),
     keymap.set('v', '<C-left>', 'b'),
-    keymap.set('v', '<C-right>', 'w'),
+    keymap.set('v', '<C-right>', 'e'),
 
     ["<leader>m"] = { "<cmd> Prettier <CR>", "Format prettier" },
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },
