@@ -1,13 +1,12 @@
 # Configuration Powershell
 Import-Module posh-git
 Import-Module oh-my-posh
+Import-Module -Name Terminal-Icons
 
- Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 # Load prompt config
 function Get-ScriptDirectoty { Split-Path $MyInvocation.ScriptName }
 $PROMPT_CONFIG = Join-path (Get-ScriptDirectoty) 'blake.omp.json'
 oh-my-posh --init --shell pwsh --config  $PROMPT_CONFIG | Invoke-Expression
-Import-Module -Name Terminal-Icons
 
 function gitstatuscommand {
   git status
@@ -19,16 +18,16 @@ Set-Alias -Name vim -Value nvim
 Set-Alias gs gitstatuscommand
 Set-Alias ll ls
 Set-Alias lg lazygit
-Set-Alias g git
-Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 # PSReadLine
-# PSReadLine
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+Set-PSFzfOption -PSReadlineChordProvider 'Ctrl+f' 
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
 
 
 # Utilities
