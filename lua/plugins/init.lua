@@ -1,24 +1,15 @@
 local plugins = {
   ['mattn/emmet-vim'] = {},
-  ['windwp/nvim-ts-autotag'] = {
-    config = function()
-      require("plugins.configs.autotag")
-    end
-  },
   ["dstein64/vim-startuptime"] = {
     cmd = "StartupTime",
-  },
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    config = function()
-      require("plugins.configs.null_ls")
-    end
   },
   ['williamboman/mason-lspconfig.nvim'] = {},
   ["uiiaoo/java-syntax.vim"] = {},
   ['nvim-tree/nvim-web-devicons'] = {
   },
   ["williamboman/nvim-lsp-installer"] = {},
-  ["glepnir/lspsaga.nvim"] = {
+  ['kkharji/lspsaga.nvim'] = {
+    event = 'BufRead',
     config = function()
       require("plugins.configs.lspsaga")
     end,
