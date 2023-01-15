@@ -10,7 +10,7 @@ M.Lspsaga = {
   keymap.set('n', '<leader>k', '<Cmd>Lspsaga hover_doc<CR>', opts),
   keymap.set('n', '<C-f>', '<Cmd>Lspsaga lsp_finder<CR>', opts),
   keymap.set('n', '<C-r>', '<Cmd>Lspsaga rename<CR>', opts),
-  keymap.set('n', '<C-o>', '<Cmd>Lspsaga outline<CR>', opts),
+  -- keymap.set('n', '<C-o>', '<Cmd>Lspsaga outline<CR>', opts),
   keymap.set('n', '<C-l>', '<Cmd>Lspsaga code_action<CR>', opts),
   keymap.set('n', ']]', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts),
   keymap.set('n', '[[', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts),
@@ -116,6 +116,9 @@ M.telescope = {
     [";e"] = { "<cmd> Telescope diagnostics <CR>", "Find error" },
     ["sf"] = { "<cmd> Telescope file_browser<CR>", "Telescope file_browser" },
     ["\\"] = { "<cmd> Telescope buffers<CR>", "Telescope buffer" },
+    ["zz"] = { "<cmd> Telescope lsp_type_definitions <CR>", "Telescope lsp_type_definitions" },
+    ["<leader>d"] = { "<cmd> Telescope lsp_definitions<CR>", "Telescope lsp_definitions" },
+    ["mm"] = { "<cmd> Telescope lsp_implementations<CR>", "Telescope implementations" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
