@@ -1,4 +1,7 @@
 local plugins = {
+  ["iamcco/markdown-preview.nvim"] = {
+    run = function() vim.fn["mkdp#util#install"]() end,
+  },
   ['mattn/emmet-vim'] = {},
   ["dstein64/vim-startuptime"] = {
     cmd = "StartupTime",
